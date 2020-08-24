@@ -4,4 +4,6 @@ $(document).ready(() => {
     $toggleCollapse.click(() => {
         $nav.toggleClass('collapse');
     });
+
+    AOS.init();
 })

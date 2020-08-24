@@ -84,12 +84,12 @@ header {
         justify-content: center;
         a {
           color: white;
+          position: relative;
         }
       }
       .toggle-collapse {
         position: absolute;
-        top: 0%;
-        width: 90%;
+        right: 10%;
         display: none;
         color: white;
         font-size: 2rem;

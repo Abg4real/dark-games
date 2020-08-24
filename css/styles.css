@@ -103,12 +103,12 @@ header .nav .nav-menu .nav-brand {
 
 header .nav .nav-menu .nav-brand a {
   color: white;
+  position: relative;
 }
 
 header .nav .nav-menu .toggle-collapse {
   position: absolute;
-  top: 0%;
-  width: 90%;
+  right: 10%;
   display: none;
   color: white;
   font-size: 2rem;
