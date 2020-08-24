@@ -332,9 +332,17 @@ main {
     }
     .section3 {
       margin-bottom: 3rem;
-      i {
-        font-size: 4rem;
-        margin: 0 1rem;
+      a {
+        text-decoration: none;
+        color: white;
+        i {
+          font-size: 4rem;
+          margin: 0 1rem;
+          transition: 0.2s all ease-in-out;
+        }
+        i:hover {
+          transform: scale(1.4);
+        }
       }
     }
   }
