@@ -3,6 +3,11 @@
   src: url("../fonts/Staubach.ttf");
 }
 
+@font-face {
+  font-family: "Do Hyeon";
+  src: url("../fonts/DoHyeon-Regular.ttf");
+}
+
 :root {
   /*      Theme colors        */
   --button-blue: #004275;
@@ -22,6 +27,10 @@ body {
 }
 
 // Global Classes
+
+p {
+  font-family: "Do Hyeon", sans-serif;
+}
 
 .container {
   padding: 0 5vw;
@@ -46,18 +55,23 @@ ul {
   clear: both;
   display: table;
 }
+.collapse {
+  height: 15rem !important;
+}
 
 // End of Global Classes
 
 header {
   .nav {
     background: var(--black);
-    min-height: 12vh;
+    height: 2rem;
+    min-height: 5rem;
     transition: height 0.2s ease-in-out;
     color: white;
     position: fixed;
     width: 100vw;
-
+    overflow: hidden;
+    padding-top: 1rem;
     .nav-menu {
       margin: 0 5vw;
       justify-content: space-between;
@@ -77,11 +91,16 @@ header {
         top: 0%;
         width: 90%;
         display: none;
+        color: white;
+        font-size: 2rem;
         cursor: pointer;
         .toggle-icons {
           display: flex;
           justify-content: flex-end;
           align-items: center;
+          a {
+            color: white;
+          }
         }
       }
       .nav-items {
@@ -120,7 +139,7 @@ header {
           height: 2px;
           bottom: 0;
           left: 0;
-          background-color: #fff;
+          background-color: white;
           visibility: hidden;
           transform: scaleX(0);
           transition: all 0.3s ease-in-out 0s;
@@ -245,7 +264,7 @@ main {
         }
         .text1 {
           width: 50%;
-          color: white;
+          color: #eff3ff;
           h3 {
             font-size: 1.8rem;
             margin: 0.5rem 0;
@@ -283,7 +302,7 @@ main {
         }
         .text2 {
           width: 50%;
-          color: white;
+          color: #eff3ff;
           h3 {
             font-size: 1.8rem;
             margin: 0.5rem 0;
@@ -311,7 +330,7 @@ main {
   .info {
     background-image: url("../assets/Backgrounds/box.png");
     background-size: 100% 100%;
-    color: white;
+    color: #eff3ff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -334,7 +353,7 @@ main {
       margin-bottom: 3rem;
       a {
         text-decoration: none;
-        color: white;
+        color: #eff3ff;
         i {
           font-size: 4rem;
           margin: 0 1rem;
@@ -342,6 +361,294 @@ main {
         }
         i:hover {
           transform: scale(1.4);
+        }
+      }
+    }
+  }
+}
+
+// Media Queries
+
+@media only screen and (max-width: 1060px) {
+  main {
+    .landing {
+      img {
+        width: 600px;
+        height: 130px;
+      }
+    }
+    .feature-section {
+      .feature-boards {
+        .feature1,
+        .feature2 {
+          .img1 {
+            width: 300px;
+            height: 160px;
+            margin-right: 10px;
+          }
+        }
+        .feature3,
+        .feature4 {
+          .img2 {
+            width: 300px;
+            height: 160px;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  main {
+    .landing {
+      background-size: 100% 99%;
+      .arrow {
+        margin-top: 3rem;
+      }
+    }
+    .info {
+      .section1 {
+        font-family: "Do Hyeon", sans-serif;
+        font-size: 1.6rem;
+      }
+      .section2 {
+        font-size: 2rem;
+        margin-top: 1rem;
+      }
+      .section3 {
+        a {
+          i {
+            font-size: 3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  main {
+    .feature-section {
+      .feature-boards {
+        .feature1,
+        .feature3 {
+          .img1 {
+            width: 260px;
+            height: 130px;
+            margin-right: 15px;
+          }
+          .text1 {
+            h3 {
+              font-size: 1.6rem;
+            }
+            p {
+              font-size: 1.2rem;
+            }
+          }
+        }
+        .feature2,
+        .feature4 {
+          .img2 {
+            width: 260px;
+            height: 130px;
+            margin-right: 15px;
+          }
+          .text2 {
+            h3 {
+              font-size: 1.6rem;
+            }
+            p {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  main {
+    .feature-section {
+      .feature-boards {
+        .feature1,
+        .feature3 {
+          .img1 {
+            width: 220px;
+            height: 110px;
+            margin-right: 15px;
+          }
+          .text1 {
+            h3 {
+              font-size: 1.6rem;
+            }
+            p {
+              font-size: 1.2rem;
+            }
+          }
+        }
+        .feature2,
+        .feature4 {
+          .img2 {
+            width: 220px;
+            height: 110px;
+            margin-right: 15px;
+          }
+          .text2 {
+            h3 {
+              font-size: 1.6rem;
+            }
+            p {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    .nav {
+      .nav-menu {
+        align-items: flex-start;
+        .nav-brand {
+          align-items: flex-start;
+          margin-left: 70px;
+        }
+        flex-direction: column;
+        .toggle-collapse {
+          display: initial;
+        }
+        .nav-items {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  main {
+    .landing {
+      img {
+        width: 70vw;
+        height: 100px;
+      }
+      .subtitle {
+        width: 70vw;
+      }
+    }
+    .feature-section {
+      .heading {
+        margin-top: 1rem;
+      }
+      .feature-boards {
+        .feature1,
+        .feature3 {
+          margin-top: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .img1 {
+            float: initial;
+            width: 60vw;
+            height: 30vw;
+            margin-right: 0px;
+          }
+          .text1 {
+            text-align: center;
+            width: 100%;
+            margin-top: 1rem;
+            h3 {
+              font-size: 1.8rem;
+            }
+            p {
+              font-size: 1.5rem;
+            }
+          }
+        }
+        .feature2,
+        .feature4 {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .img2 {
+            float: none;
+            width: 60vw;
+            height: 30vw;
+          }
+          .text2 {
+            margin-top: 1rem;
+            width: 100%;
+            text-align: center;
+            h3 {
+              font-size: 1.8rem;
+            }
+            p {
+              font-size: 1.5rem;
+            }
+          }
+        }
+        .feature4 {
+          margin-bottom: 8rem;
+        }
+      }
+    }
+    .info {
+      .section1 {
+        text-align: center;
+      }
+      .section2 {
+        font-size: 1.6rem;
+      }
+      .section3 {
+        a {
+          i {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  main {
+    .feature-section {
+      .feature-boards {
+        .feature1,
+        .feature2,
+        .feature3,
+        .feature4 {
+          h3 {
+            font-size: 1.4rem;
+          }
+          p {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+    .info {
+      .section1 {
+        font-size: 1.3rem;
+      }
+      .section2 {
+        font-size: 1.4rem;
+        text-align: center;
+      }
+      .section3 {
+        text-align: center;
+        a {
+          i {
+            margin-top: 1rem;
+          }
         }
       }
     }

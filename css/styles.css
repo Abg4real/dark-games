@@ -3,6 +3,11 @@
   src: url("../fonts/Staubach.ttf");
 }
 
+@font-face {
+  font-family: "Do Hyeon";
+  src: url("../fonts/DoHyeon-Regular.ttf");
+}
+
 :root {
   /*      Theme colors        */
   --button-blue: #004275;
@@ -19,6 +24,10 @@ body {
           box-sizing: border-box;
   overflow-x: hidden;
   font-family: var(--staubach);
+}
+
+p {
+  font-family: "Do Hyeon", sans-serif;
 }
 
 .container {
@@ -51,14 +60,21 @@ ul {
   display: table;
 }
 
+.collapse {
+  height: 15rem !important;
+}
+
 header .nav {
   background: var(--black);
-  min-height: 12vh;
+  height: 2rem;
+  min-height: 5rem;
   -webkit-transition: height 0.2s ease-in-out;
   transition: height 0.2s ease-in-out;
   color: white;
   position: fixed;
   width: 100vw;
+  overflow: hidden;
+  padding-top: 1rem;
 }
 
 header .nav .nav-menu {
@@ -94,6 +110,8 @@ header .nav .nav-menu .toggle-collapse {
   top: 0%;
   width: 90%;
   display: none;
+  color: white;
+  font-size: 2rem;
   cursor: pointer;
 }
 
@@ -107,6 +125,10 @@ header .nav .nav-menu .toggle-collapse .toggle-icons {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+header .nav .nav-menu .toggle-collapse .toggle-icons a {
+  color: white;
 }
 
 header .nav .nav-menu .nav-items {
@@ -160,7 +182,7 @@ header .nav .nav-menu .nav-items .nav-link a::before {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #fff;
+  background-color: white;
   visibility: hidden;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
@@ -354,7 +376,7 @@ main .feature-section .feature-boards .feature3 .img1 {
 main .feature-section .feature-boards .feature1 .text1,
 main .feature-section .feature-boards .feature3 .text1 {
   width: 50%;
-  color: white;
+  color: #eff3ff;
 }
 
 main .feature-section .feature-boards .feature1 .text1 h3,
@@ -407,7 +429,7 @@ main .feature-section .feature-boards .feature4 .img2 {
 main .feature-section .feature-boards .feature2 .text2,
 main .feature-section .feature-boards .feature4 .text2 {
   width: 50%;
-  color: white;
+  color: #eff3ff;
 }
 
 main .feature-section .feature-boards .feature2 .text2 h3,
@@ -442,7 +464,7 @@ main .feature-section .feature-boards .feature4 {
 main .info {
   background-image: url("../assets/Backgrounds/box.png");
   background-size: 100% 100%;
-  color: white;
+  color: #eff3ff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -481,7 +503,7 @@ main .info .section3 {
 
 main .info .section3 a {
   text-decoration: none;
-  color: white;
+  color: #eff3ff;
 }
 
 main .info .section3 a i {
@@ -494,5 +516,260 @@ main .info .section3 a i {
 main .info .section3 a i:hover {
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
+}
+
+@media only screen and (max-width: 1060px) {
+  main .landing img {
+    width: 600px;
+    height: 130px;
+  }
+  main .feature-section .feature-boards .feature1 .img1,
+  main .feature-section .feature-boards .feature2 .img1 {
+    width: 300px;
+    height: 160px;
+    margin-right: 10px;
+  }
+  main .feature-section .feature-boards .feature3 .img2,
+  main .feature-section .feature-boards .feature4 .img2 {
+    width: 300px;
+    height: 160px;
+    margin-left: 10px;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  main .landing {
+    background-size: 100% 99%;
+  }
+  main .landing .arrow {
+    margin-top: 3rem;
+  }
+  main .info .section1 {
+    font-family: "Do Hyeon", sans-serif;
+    font-size: 1.6rem;
+  }
+  main .info .section2 {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+  main .info .section3 a i {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  main .feature-section .feature-boards .feature1 .img1,
+  main .feature-section .feature-boards .feature3 .img1 {
+    width: 260px;
+    height: 130px;
+    margin-right: 15px;
+  }
+  main .feature-section .feature-boards .feature1 .text1 h3,
+  main .feature-section .feature-boards .feature3 .text1 h3 {
+    font-size: 1.6rem;
+  }
+  main .feature-section .feature-boards .feature1 .text1 p,
+  main .feature-section .feature-boards .feature3 .text1 p {
+    font-size: 1.2rem;
+  }
+  main .feature-section .feature-boards .feature2 .img2,
+  main .feature-section .feature-boards .feature4 .img2 {
+    width: 260px;
+    height: 130px;
+    margin-right: 15px;
+  }
+  main .feature-section .feature-boards .feature2 .text2 h3,
+  main .feature-section .feature-boards .feature4 .text2 h3 {
+    font-size: 1.6rem;
+  }
+  main .feature-section .feature-boards .feature2 .text2 p,
+  main .feature-section .feature-boards .feature4 .text2 p {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  main .feature-section .feature-boards .feature1 .img1,
+  main .feature-section .feature-boards .feature3 .img1 {
+    width: 220px;
+    height: 110px;
+    margin-right: 15px;
+  }
+  main .feature-section .feature-boards .feature1 .text1 h3,
+  main .feature-section .feature-boards .feature3 .text1 h3 {
+    font-size: 1.6rem;
+  }
+  main .feature-section .feature-boards .feature1 .text1 p,
+  main .feature-section .feature-boards .feature3 .text1 p {
+    font-size: 1.2rem;
+  }
+  main .feature-section .feature-boards .feature2 .img2,
+  main .feature-section .feature-boards .feature4 .img2 {
+    width: 220px;
+    height: 110px;
+    margin-right: 15px;
+  }
+  main .feature-section .feature-boards .feature2 .text2 h3,
+  main .feature-section .feature-boards .feature4 .text2 h3 {
+    font-size: 1.6rem;
+  }
+  main .feature-section .feature-boards .feature2 .text2 p,
+  main .feature-section .feature-boards .feature4 .text2 p {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  header .nav .nav-menu {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .nav .nav-menu .nav-brand {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-left: 70px;
+  }
+  header .nav .nav-menu .toggle-collapse {
+    display: initial;
+  }
+  header .nav .nav-menu .nav-items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  main .landing img {
+    width: 70vw;
+    height: 100px;
+  }
+  main .landing .subtitle {
+    width: 70vw;
+  }
+  main .feature-section .heading {
+    margin-top: 1rem;
+  }
+  main .feature-section .feature-boards .feature1,
+  main .feature-section .feature-boards .feature3 {
+    margin-top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .feature-section .feature-boards .feature1 .img1,
+  main .feature-section .feature-boards .feature3 .img1 {
+    float: initial;
+    width: 60vw;
+    height: 30vw;
+    margin-right: 0px;
+  }
+  main .feature-section .feature-boards .feature1 .text1,
+  main .feature-section .feature-boards .feature3 .text1 {
+    text-align: center;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  main .feature-section .feature-boards .feature1 .text1 h3,
+  main .feature-section .feature-boards .feature3 .text1 h3 {
+    font-size: 1.8rem;
+  }
+  main .feature-section .feature-boards .feature1 .text1 p,
+  main .feature-section .feature-boards .feature3 .text1 p {
+    font-size: 1.5rem;
+  }
+  main .feature-section .feature-boards .feature2,
+  main .feature-section .feature-boards .feature4 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .feature-section .feature-boards .feature2 .img2,
+  main .feature-section .feature-boards .feature4 .img2 {
+    float: none;
+    width: 60vw;
+    height: 30vw;
+  }
+  main .feature-section .feature-boards .feature2 .text2,
+  main .feature-section .feature-boards .feature4 .text2 {
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+  main .feature-section .feature-boards .feature2 .text2 h3,
+  main .feature-section .feature-boards .feature4 .text2 h3 {
+    font-size: 1.8rem;
+  }
+  main .feature-section .feature-boards .feature2 .text2 p,
+  main .feature-section .feature-boards .feature4 .text2 p {
+    font-size: 1.5rem;
+  }
+  main .feature-section .feature-boards .feature4 {
+    margin-bottom: 8rem;
+  }
+  main .info .section1 {
+    text-align: center;
+  }
+  main .info .section2 {
+    font-size: 1.6rem;
+  }
+  main .info .section3 a i {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  main .feature-section .feature-boards .feature1 h3,
+  main .feature-section .feature-boards .feature2 h3,
+  main .feature-section .feature-boards .feature3 h3,
+  main .feature-section .feature-boards .feature4 h3 {
+    font-size: 1.4rem;
+  }
+  main .feature-section .feature-boards .feature1 p,
+  main .feature-section .feature-boards .feature2 p,
+  main .feature-section .feature-boards .feature3 p,
+  main .feature-section .feature-boards .feature4 p {
+    font-size: 1rem;
+  }
+  main .info .section1 {
+    font-size: 1.3rem;
+  }
+  main .info .section2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  main .info .section3 {
+    text-align: center;
+  }
+  main .info .section3 a i {
+    margin-top: 1rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
