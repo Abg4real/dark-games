@@ -633,7 +633,7 @@ main .info .section3 a i:hover {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    margin-left: 70px;
+    margin-left: 20px;
   }
   header .nav .nav-menu .toggle-collapse {
     display: initial;
