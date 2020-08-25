@@ -33,7 +33,7 @@ body {
 }
 
 .scrolled {
-  background-color: rgba(0, 0, 0, 0.75) !important;
+  background-color: #00062f !important;
   -webkit-transition: background-color 500ms linear !important;
   transition: background-color 500ms linear !important;
 }
