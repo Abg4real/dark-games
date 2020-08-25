@@ -38,6 +38,12 @@ body {
   transition: background-color 500ms linear !important;
 }
 
+.unscrolled {
+  background: none;
+  -webkit-transition: background 500ms linear !important;
+  transition: background 500ms linear !important;
+}
+
 p {
   font-family: "Montserrat", sans-serif;
 }

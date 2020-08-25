@@ -8,8 +8,10 @@ $(document).ready(() => {
     $(window).scroll(function () {
         if ($(document).scrollTop() > 100) {
             $("nav").addClass("scrolled");
+            $("nav").removeClass("unscrolled")
         } else {
             $("nav").removeClass("scrolled");
+            $("nav").addClass("unscrolled");
         }
     });
 
