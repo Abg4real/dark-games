@@ -61,7 +61,7 @@ ul {
 }
 
 .collapse {
-  height: 15rem !important;
+  height: 18rem !important;
 }
 
 header .nav {
@@ -74,7 +74,7 @@ header .nav {
   position: fixed;
   width: 100vw;
   overflow: hidden;
-  padding-top: 1rem;
+  z-index: 3;
 }
 
 header .nav .nav-menu {
@@ -620,6 +620,9 @@ main .info .section3 a i:hover {
 }
 
 @media only screen and (max-width: 768px) {
+  header .nav {
+    padding-top: 1rem;
+  }
   header .nav .nav-menu {
     -webkit-box-align: start;
         -ms-flex-align: start;
