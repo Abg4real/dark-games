@@ -32,6 +32,12 @@ body {
   font-family: var(--staubach);
 }
 
+.scrolled {
+  background-color: rgba(0, 0, 0, 0.75) !important;
+  -webkit-transition: background-color 500ms linear !important;
+  transition: background-color 500ms linear !important;
+}
+
 p {
   font-family: "Montserrat", sans-serif;
 }
@@ -219,12 +225,12 @@ main {
 main .landing {
   background-image: url("../assets/Backgrounds/shadow-runner-img.jpg");
   background-size: 100% 100%;
-  min-height: 80vh;
+  min-height: 100vh;
 }
 
 main .landing .landing-content {
   max-width: 1140px;
-  min-height: 80vh;
+  min-height: 100vh;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;

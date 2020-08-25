@@ -5,6 +5,14 @@ $(document).ready(() => {
         $nav.toggleClass('collapse');
     });
 
+    $(window).scroll(function () {
+        if ($(document).scrollTop() > 100) {
+            $("nav").addClass("scrolled");
+        } else {
+            $("nav").removeClass("scrolled");
+        }
+    });
+
     AOS.init();
 
     $(window).resize(function () {
